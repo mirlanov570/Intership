@@ -1,187 +1,210 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
-  </head>
-  <body>
-   
-    <form class="calc">
-      <div class="calc__logo"><span class="calc__j">J</span>K</div>
-      <div class="calc__memory"></div>
-      <div class="calc__error"></div>
-      <input
-        class="calc__screen"
-        type="text"
-        name="output"
-        maxlength="10"
-        value="0"
-        readonly
-      />
-      <div class="calc__btns">
-        <button
-          class="calc__btn calc__btn--secondary"
-          type="button"
-          data-fn="%"
-          title="Percent"
-          aria-label="Percent"
-          ontouchstart=""
-        >
-          <span tabindex="-1">%</span>
-        </button>
-        <button
-          class="calc__btn calc__btn--secondary"
-          type="button"
-          data-fn="sqrt"
-          title="Square Root"
-          aria-label="Square Root"
-          ontouchstart=""
-        >
-          <span tabindex="-1"><small>&radic;</small></span>
-        </button>
-        <button
-          class="calc__btn calc__btn--secondary"
-          type="button"
-          data-fn="+-"
-          title="Negate Value"
-          aria-label="Negate Value"
-          ontouchstart=""
-        >
-          <span tabindex="-1"><small>+/-</small></span>
-        </button>
-        <button
-          class="calc__btn calc__btn--primary"
-          type="button"
-          data-fn="C"
-          title="Clear"
-          aria-label="Clear"
-          ontouchstart=""
-        >
-          <span tabindex="-1">C</span>
-        </button>
-        <button
-          class="calc__btn calc__btn--secondary"
-          type="button"
-          data-fn="mrc"
-          title="Recall/Clear Memory"
-          aria-label="Recall/Clear Memory"
-          ontouchstart=""
-        >
-          <span tabindex="-1"><small>MRC</small></span>
-        </button>
-        <button
-          class="calc__btn calc__btn--secondary"
-          type="button"
-          data-fn="m-"
-          title="Subtract From Memory"
-          aria-label="Subtract From Memory"
-          ontouchstart=""
-        >
-          <span tabindex="-1"><small>M-</small></span>
-        </button>
-        <button
-          class="calc__btn calc__btn--secondary"
-          type="button"
-          data-fn="m+"
-          title="Add To Memory"
-          aria-label="Add To Memory"
-          ontouchstart=""
-        >
-          <span tabindex="-1"><small>M+</small></span>
-        </button>
-        <button
-          class="calc__btn calc__btn--secondary"
-          type="button"
-          data-fn="/"
-          title="Divided By"
-          aria-label="Divided By"
-          ontouchstart=""
-        >
-          <span tabindex="-1">&divide;</span>
-        </button>
-        <button class="calc__btn" type="button" data-fn="7" ontouchstart="">
-          <span tabindex="-1">7</span>
-        </button>
-        <button class="calc__btn" type="button" data-fn="8" ontouchstart="">
-          <span tabindex="-1">8</span>
-        </button>
-        <button class="calc__btn" type="button" data-fn="9" ontouchstart="">
-          <span tabindex="-1">9</span>
-        </button>
-        <button
-          class="calc__btn calc__btn--secondary"
-          type="button"
-          data-fn="*"
-          title="Times"
-          aria-label="Times"
-          ontouchstart=""
-        >
-          <span tabindex="-1">&times;</span>
-        </button>
-        <button class="calc__btn" type="button" data-fn="4" ontouchstart="">
-          <span tabindex="-1">4</span>
-        </button>
-        <button class="calc__btn" type="button" data-fn="5" ontouchstart="">
-          <span tabindex="-1">5</span>
-        </button>
-        <button class="calc__btn" type="button" data-fn="6" ontouchstart="">
-          <span tabindex="-1">6</span>
-        </button>
-        <button
-          class="calc__btn calc__btn--secondary"
-          type="button"
-          data-fn="-"
-          title="Minus"
-          aria-label="Minus"
-          ontouchstart=""
-        >
-          <span tabindex="-1">-</span>
-        </button>
-        <button class="calc__btn" type="button" data-fn="1" ontouchstart="">
-          <span tabindex="-1">1</span>
-        </button>
-        <button class="calc__btn" type="button" data-fn="2" ontouchstart="">
-          <span tabindex="-1">2</span>
-        </button>
-        <button class="calc__btn" type="button" data-fn="3" ontouchstart="">
-          <span tabindex="-1">3</span>
-        </button>
-        <button
-          class="calc__btn calc__btn--secondary calc__btn--tall"
-          type="button"
-          data-fn="+"
-          title="Plus"
-          aria-label="Plus"
-          ontouchstart=""
-        >
-          <span tabindex="-1">+</span>
-        </button>
-        <button class="calc__btn" type="button" data-fn="0" ontouchstart="">
-          <span tabindex="-1">0</span>
-        </button>
-        <button
-          class="calc__btn"
-          type="button"
-          data-fn="."
-          aria-label="Point"
-          ontouchstart=""
-        >
-          <span tabindex="-1">.</span>
-        </button>
-        <button
-          class="calc__btn"
-          type="button"
-          data-fn="="
-          title="Equals"
-          aria-label="Equals"
-          ontouchstart=""
-        >
-          <span tabindex="-1">=</span>
-        </button>
-      </div>
-    </form>
-  </body>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Cards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .pokemon-card {
+            width: 250px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .pokemon-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .pokemon-info {
+            padding: 15px;
+        }
+
+        .pokemon-info h2 {
+            margin: 0;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .pokemon-info p {
+            margin: 10px 0;
+            color: #777;
+        }
+
+        .pokemon-info .type {
+            padding: 5px 10px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            background-color: #f9f9f9;
+            border-top: 1px solid #eee;
+        }
+
+        .stats div {
+            text-align: center;
+        }
+
+        .stats div p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .stats div p.value {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .electric { background-color: #ffcc00; color: #fff; }
+        .water { background-color: #3399ff; color: #fff; }
+        .fire { background-color: #ff3300; color: #fff; }
+        .grass { background-color: #66cc33; color: #fff; }
+        .psychic { background-color: #ff66cc; color: #fff; }
+    </style>
+</head>
+<body>
+    <!-- Карточка Пикачу -->
+    <div class="pokemon-card">
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png" alt="Пикачу">
+        <div class="pokemon-info">
+            <h2>Пикачу</h2>
+            <p>Электрический тип покемона</p>
+            <span class="type electric">Электрический</span>
+        </div>
+        <div class="stats">
+            <div>
+                <p>HP</p>
+                <p class="value">35</p>
+            </div>
+            <div>
+                <p>Атака</p>
+                <p class="value">55</p>
+            </div>
+            <div>
+                <p>Скорость</p>
+                <p class="value">90</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Карточка Сквиртл -->
+    <div class="pokemon-card">
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png" alt="Сквиртл">
+        <div class="pokemon-info">
+            <h2>Сквиртл</h2>
+            <p>Водный тип покемона</p>
+            <span class="type water">Водный</span>
+        </div>
+        <div class="stats">
+            <div>
+                <p>HP</p>
+                <p class="value">44</p>
+            </div>
+            <div>
+                <p>Атака</p>
+                <p class="value">48</p>
+            </div>
+            <div>
+                <p>Скорость</p>
+                <p class="value">43</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Карточка Чармандер -->
+    <div class="pokemon-card">
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png" alt="Чармандер">
+        <div class="pokemon-info">
+            <h2>Чармандер</h2>
+            <p>Огненный тип покемона</p>
+            <span class="type fire">Огненный</span>
+        </div>
+        <div class="stats">
+            <div>
+                <p>HP</p>
+                <p class="value">39</p>
+            </div>
+            <div>
+                <p>Атака</p>
+                <p class="value">52</p>
+            </div>
+            <div>
+                <p>Скорость</p>
+                <p class="value">65</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Карточка Булбазавр -->
+    <div class="pokemon-card">
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" alt="Булбазавр">
+        <div class="pokemon-info">
+            <h2>Булбазавр</h2>
+            <p>Травяной тип покемона</p>
+            <span class="type grass">Травяной</span>
+        </div>
+        <div class="stats">
+            <div>
+                <p>HP</p>
+                <p class="value">45</p>
+            </div>
+            <div>
+                <p>Атака</p>
+                <p class="value">49</p>
+            </div>
+            <div>
+                <p>Скорость</p>
+                <p class="value">45</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Карточка Мьюту -->
+    <div class="pokemon-card">
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png" alt="Мьюту">
+        <div class="pokemon-info">
+            <h2>Мьюту</h2>
+            <p>Психический тип покемона</p>
+            <span class="type psychic">Психический</span>
+        </div>
+        <div class="stats">
+            <div>
+                <p>HP</p>
+                <p class="value">106</p>
+            </div>
+            <div>
+                <p>Атака</p>
+                <p class="value">110</p>
+            </div>
+            <div>
+                <p>Скорость</p>
+                <p class="value">130</p>
+            </div>
+        </div>
+    </div>
+
+</body>
 </html>
+    
